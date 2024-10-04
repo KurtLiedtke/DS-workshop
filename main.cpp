@@ -2,14 +2,13 @@
 #include <iostream>
 #include <list>
 
-
 int main(int argc, char *argv[]) {
-    std::list::<std::string> list;
-    for(int 1; i<argc; i++) {
-        list.push_back(argv[i]);
+    std::list<int> list;
+    for(int i = 1; i<argc; i++) {
+        list.push_back(std::stoi(argv[i]));
     }
-    for(std::list<std::string>::reverse_iterator itr list.end(); itr != list.begin(); --itr) {
-        std::cout<< *itr<< std::endl;
+    for(std::list<int>::reverse_iterator itr = list.rbegin(); itr != list.rend(); ++itr) {
+        std::cout<< (*itr) * (*itr) << std::endl;
     }
     return 0;
 }
