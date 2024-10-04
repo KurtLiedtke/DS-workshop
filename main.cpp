@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
     for(int 1; i<argc; i++) {
         list.push_back(argv[i]);
     }
-    for(std::list<std::string>::iterator itr list.begin(); itr != list.end(); ++itr) {
+    for(std::list<std::string>::reverse_iterator itr list.end(); itr != list.begin(); --itr) {
         std::cout<< *itr<< std::endl;
     }
     return 0;
